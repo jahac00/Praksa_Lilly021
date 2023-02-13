@@ -41,7 +41,7 @@ function NavBar() {
             <Form className="d-flex">
               <Form.Control
                 type="search"
-                placeholder="Search Coctail by ID"
+                placeholder="Search octail by ID"
                 className="me-2"
                 aria-label="Search"
               />
@@ -64,7 +64,7 @@ function NavBar() {
               element={<BartenderVeteran />}
             ></Route>
             <Route
-              path="/searh-bar"
+              path="/search-bar"
               element={<SearhBar />}
             ></Route>
           </Routes>
