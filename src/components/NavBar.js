@@ -1,5 +1,7 @@
 import Container from "react-bootstrap/Container";
+import NavButton from "./NavButton";
 import Nav from "react-bootstrap/Nav";
+import Form from 'react-bootstrap/Form';
 import Navbar from "react-bootstrap/Navbar";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Categories from "../pages/Categories";
@@ -8,6 +10,7 @@ import Home from "../pages/Home";
 import Ingridients from "../pages/Ingridients";
 import BartenderBeginner from "../pages/BartenderBeginner";
 import BartenderVeteran from "../pages/BartenderVeteran";
+import SearhBar from "../pages/SearhBar";
 
 function NavBar() {
   return (
@@ -35,6 +38,15 @@ function NavBar() {
                 Bartender Veteran
               </Nav.Link>
             </Nav>
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder="Search Coctail by ID"
+                className="me-2"
+                aria-label="Search"
+              />
+              <NavButton variant="outline-success" >Searh</NavButton>
+            </Form>
           </Container>
         </Navbar>
         <div>
@@ -43,8 +55,18 @@ function NavBar() {
             <Route path="/categories" element={<Categories />}></Route>
             <Route path="/glasses" element={<Glasses />}></Route>
             <Route path="/ingridients" element={<Ingridients />}></Route>
-            <Route path="/bartender-beginner" element={<BartenderBeginner />}></Route>
-            <Route path="/bartender-veteran" element={<BartenderVeteran />}></Route>
+            <Route
+              path="/bartender-beginner"
+              element={<BartenderBeginner />}
+            ></Route>
+            <Route
+              path="/bartender-veteran"
+              element={<BartenderVeteran />}
+            ></Route>
+            <Route
+              path="/searh-bar"
+              element={<SearhBar />}
+            ></Route>
           </Routes>
         </div>
       </BrowserRouter>
